@@ -19,9 +19,9 @@ my $orig_handler_for = \&MT::Template::Context::handler_for;
     my ( $h ) = $hdlr->values;
   
     MT->run_callbacks( 'tag_missing', $ctx, $tag ) unless $h;
+
+    $orig_handler_for->( $ctx, $tag )
   
-    my $missing_hdlr = $ctx->{__handlers}{$tag};
-    ref( $missing_hdlr ) eq 'MT::Template::Handler' ? $missing_hdlr : $hdlr;
   };
 }
 
