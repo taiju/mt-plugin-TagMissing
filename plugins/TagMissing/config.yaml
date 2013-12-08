@@ -1,0 +1,8 @@
+id: tagmissing
+key: tagmissing
+name: TagMissing
+version: 0.1
+description: Add callback tag_missing. 
+author_name: taiju
+author_link: http://taiju.hatenablog.com/
+init: $tagmissing::TagMissing::Patch::init
